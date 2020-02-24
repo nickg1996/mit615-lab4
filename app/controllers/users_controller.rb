@@ -17,6 +17,10 @@
 
 class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
+  
+  def index
+    @users = User.paginate(page: params[:page], per_page: params[:per_page] ||= 25)
+  end
 
   # GET /users
   # GET /users.json
