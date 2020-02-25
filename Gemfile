@@ -7,7 +7,6 @@ end
 
 gem 'will_paginate', '~> 3.1.0'
 gem 'pg', '~> 0.21'
-gem 'rails_12factor'
 
 gem 'faker'
 gem 'bootstrap-sass'
@@ -58,5 +57,8 @@ group :development do
   gem 'rails-erd'
 end
 
+group :production do
+  gem 'rails_12factor'
+end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
