@@ -8,6 +8,7 @@ end
 gem 'will_paginate', '~> 3.1.0'
 gem 'pg', '~> 0.21'
 
+
 gem 'faker'
 gem 'bootstrap-sass'
 gem 'jquery-rails'
