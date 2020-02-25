@@ -16,14 +16,10 @@
 class MicropostsController < ApplicationController
   before_action :set_micropost, only: [:show, :edit, :update, :destroy]
 
-  def index
-   @microposts = Micropost.paginate(page: params[:page], per_page: params[:per_page] ||= 25)
-  end
-
   # GET /microposts
   # GET /microposts.json
   def index
-    @microposts = Micropost.all
+    @microposts = Micropost.paginate(page: params[:page], per_page: params[:per_page] ||= 25)
   end
 
   # GET /microposts/1

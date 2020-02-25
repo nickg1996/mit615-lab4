@@ -2,8 +2,6 @@ version: '3.4'
 services:
  db:
      image: postgres:9.6.13-alpine
-     volumes:
-          - ./tmp/db:/var/lib/postgresql/
      ports:
           - "54320:5432"
  redis:

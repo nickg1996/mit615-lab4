@@ -6,7 +6,7 @@ echo "Attempting to migrate"
 bin/rails db:migrate 2>/dev/null
 RET=$?
 set -e
-if [ $RET -GT 0 ]; then
+if [ $RET -gt 0 ]; then
   echo "Migration Failed"
   bin/rails db:create
   echo "Migrating the Database"
